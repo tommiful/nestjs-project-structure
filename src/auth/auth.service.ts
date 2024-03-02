@@ -51,7 +51,6 @@ export class AuthService {
 
       return { userId: payload.sub, username: payload.username, roles: payload.roles };
     } catch {
-      // Unexpected token i in JSON at position XX
       return null;
     }
   }
