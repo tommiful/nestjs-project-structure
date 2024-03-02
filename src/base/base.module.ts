@@ -5,7 +5,8 @@ import { TerminusModule } from '@nestjs/terminus';
 import * as controllers from './controllers';
 
 @Module({
-  imports: [TerminusModule, HttpModule], // Authentication
+  // Authentication
+  imports: [TerminusModule, HttpModule], 
   controllers: Object.values(controllers),
 })
 export class BaseModule {}
