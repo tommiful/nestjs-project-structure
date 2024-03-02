@@ -5,7 +5,7 @@ import helmet from 'helmet';
 import passport from 'passport';
 
 export function middleware(app: INestApplication): INestApplication {
-  const isProduction = process.env.NODE_ENV === 'production';
+  const isProduction = process.env.NODE_ENV! === 'production';
 
   app.use(compression());
   app.use(
