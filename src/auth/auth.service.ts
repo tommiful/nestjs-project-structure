@@ -60,7 +60,8 @@ export class AuthService {
       { sub },
       {
         secret: this.config.get('jwtRefreshSecret'),
-        expiresIn: '7d', // Set greater than the expiresIn of the access_token
+        // Set greater than the expiresIn of the access_token
+        expiresIn: '7d', 
       },
     );
   }
