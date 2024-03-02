@@ -8,7 +8,6 @@ export class AuthenticatedGuard implements CanActivate {
   constructor(private reflector: Reflector) {}
 
   public canActivate(context: ExecutionContext): boolean {
-    // https://github.com/nestjs/nest/issues/964#issuecomment-480834786
     const isPublic = this.reflector.get<boolean>('isPublic', context.getHandler());
     if (isPublic) {
       return true;
